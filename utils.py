@@ -1,7 +1,8 @@
 import config
+from typing import Optional
 
 
-def get_thread_id_from_recipient_id(recipient_id: str) -> str | None:
+def get_thread_id_from_recipient_id(recipient_id: str) -> Optional[str]:
   try:
     thread_id = config.MAPPINGS_DATA['mappings'].get(recipient_id)
     return thread_id

@@ -12,7 +12,7 @@ def ask_openai_assistant(query: str, recipient_id: str) -> str:
         print(thread_id)
         if thread_id:
             thread = openai.beta.threads.retrieve(
-                thread_id=thread_id
+                thread_id=thread_id,
             )
         else:
             thread = openai.beta.threads.create()
